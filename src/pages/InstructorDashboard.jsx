@@ -16,7 +16,7 @@ const InstructorDashboard = () => {
 
   return (
     <>
-      <Navbar />
+      <><Navbar /></>
       <div className="p-6">
         <h1 className="text-2xl font-bold mb-4">Instructor Dashboard</h1>
         {loading ? (

@@ -40,7 +40,7 @@ const authSlice = createSlice({
         })
         .addCase(loginUser.fulfilled, (state, action) => {
           state.loading = false;
-          state.user = action.payload; // Update the user state with token and role
+          state.user = action.payload; 
         })
         .addCase(loginUser.rejected, (state, action) => {
           state.loading = false;

@@ -7,7 +7,7 @@ import AdminDashboard from "./pages/AdminDashboard";
 import InstructorDashboard from "./pages/InstructorDashboard";
 import Login from "./pages/Login";
 
-// import ProtectedRoute from "./components/ProtectedRoute";
+
 
 function App() {
 
@@ -24,7 +24,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Login />} />
 
-        {/* Protected routes */}
+      
         <Route
           path="/admin"
           element={<AdminDashboard />}

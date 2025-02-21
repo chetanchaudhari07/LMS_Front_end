@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchLectures } from "../redux/slices/lectureSlice";
-import Navbar from "../components/Navbar";
+import Navbar from "../Components/Navbar";
 
 const InstructorDashboard = () => {
   const dispatch = useDispatch();

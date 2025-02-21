@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchInstructors } from "../redux/slices/instructorSlice";
-import Navbar from "../components/Navbar";
+import Navbar from "../Components/Navbar";
 
 const AdminDashboard = () => {
   const dispatch = useDispatch();
@@ -13,7 +13,7 @@ const AdminDashboard = () => {
 
   return (
     <>
-      <Navbar />
+      <><Navbar /></>
       <div className="p-6">
         <h1 className="text-2xl font-bold mb-4">Admin Dashboard</h1>
         {loading ? (

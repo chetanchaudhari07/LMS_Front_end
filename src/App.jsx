@@ -2,6 +2,7 @@ import React ,{useEffect} from "react";
 import { useDispatch } from "react-redux";
 import { initializeAuth } from "./redux/slices/authSlice";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
 import AdminDashboard from "./pages/AdminDashboard";
 import InstructorDashboard from "./pages/InstructorDashboard";
 import Login from "./pages/Login";
@@ -19,7 +20,7 @@ function App() {
 
   return (
     <Router>
-     
+      <Navbar/>
       <Routes>
         <Route path="/" element={<Login />} />
 

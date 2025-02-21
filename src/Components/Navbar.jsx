@@ -10,20 +10,51 @@ const Navbar = () => {
 
   const handleLogout = () => {
     dispatch(logoutUser()).then(() => {
-      navigate("/"); 
+      navigate("/");
     });
   };
 
   return (
-    <nav>
-      <Link to="/">Home</Link>
-      {user && user.role === "admin" && <Link to="/admin">Admin</Link>}
-      {user && user.role === "instructor" && <Link to="/instructor">Instructor</Link>}
-      {user ? (
-        <button onClick={handleLogout}>Logout</button>
-      ) : (
-        <Link to="/">Login</Link>
-      )}
+    <nav className="bg-blue-600 text-white p-4 flex justify-between items-center shadow-md">
+      {/* Left side - Logo */}
+      <div>
+        <Link to="/" className="text-xl font-bold hover:text-gray-200 transition">
+          LMS
+        </Link>
+      </div>
+
+      {/* Middle - Navigation Links */}
+      <div className="space-x-4">
+        {user && user.role === "admin" && (
+          <Link to="/admin" className="hover:text-gray-200 transition">
+            Admin
+          </Link>
+        )}
+        {user && user.role === "instructor" && (
+          <Link to="/instructor" className="hover:text-gray-200 transition">
+            Instructor
+          </Link>
+        )}
+      </div>
+
+      {/* Right Side - Login/Logout */}
+      <div>
+        {user ? (
+          <button
+            onClick={handleLogout}
+            className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded transition"
+          >
+            Logout
+          </button>
+        ) : (
+          <Link
+            to="/"
+            className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded transition"
+          >
+            Login
+          </Link>
+        )}
+      </div>
     </nav>
   );
 };
